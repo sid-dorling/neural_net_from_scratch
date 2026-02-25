@@ -19,10 +19,6 @@ class Neuron:
         self.activation = sigmoid((sum(w * d for w, d in zip(self.w, data))/len(data)) + self.b) #multiply inputs with weights, then add bias, sigmoid function to set value between 0 and 1
         return self.activation
 
-    def __repr__(self): #for keeping track of layers
-        return f'N(w, b)'
-
-
 class Layer:
     def __init__(self, n, nin):                                 
         self.neurons = [Neuron(nin) for _ in range(n)] #create n neurons to make a layer
@@ -92,3 +88,4 @@ nn = Module(data, 4, 4, 2)
 print('\n', nn, '\n')
 target = [0.5, 1]
 print('\n', nn.training_loop(target, 0.1, 20))
+
