@@ -29,7 +29,7 @@ class Layer:
     def __repr__(self):
         return f'{self.neurons}'
 
-class Module:
+class MLP:
     def __init__(self, data, l1, l2, L):
         self.data = data
         input_n = len(data)
@@ -84,8 +84,9 @@ class Module:
     
 data = [3, 6, -1, 4]
 
-nn = Module(data, 4, 4, 2)
+nn = MLP(data, 4, 4, 2)
 print('\n', nn, '\n')
 target = [0.5, 1]
 print('\n', nn.training_loop(target, 0.1, 20))
+
 
