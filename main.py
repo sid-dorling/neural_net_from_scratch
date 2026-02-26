@@ -84,9 +84,10 @@ class MLP:
     
 data = [3, 6, -1, 4]
 
-nn = MLP(data, 4, 4, 2)
+nn = MLP(data, 4, 4, 4)
 print('\n', nn, '\n')
-target = [0.5, 1]
+target = [1, 0, 0.5, 1]
 print('\n', nn.training_loop(target, 0.1, 20))
+
 
 
