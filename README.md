@@ -3,3 +3,5 @@ Neural network built completely from scratch
 
 Includes an input and output layer with 2 hidden layers. The number of neurons in each layer is variable. Each Neuron receives a "grad" during backpropogation, which shows the neuron's impact on the loss, and is used to adjust the neuron in a way that decreases the loss
 Each layer uses sigmoid function for binary classification and non-linearity, outputs range from 0.0 to 1.0 due to the output layer also having a sigmoid function.
+
+I have also made a second neural net that acts in the exact same way, but using matrices in numpy to make all of the calculations more efficient, allowing for a more accurate training of the net
